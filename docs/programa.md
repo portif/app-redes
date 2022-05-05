@@ -1,12 +1,10 @@
 # Programa de disciplina
 
-```{eval-rst}
-:Curso: Tecnologia em Sistemas para Internet
-:Disciplina: Aplicações de Redes de Computadores
-:Carga-Horária: 60h (80h/a) 
-:Pré-Requisito(s): :doc:`redes-de-computadores`
-:Número de créditos: 4
-```
+- Curso: Tecnologia em Sistemas para Internet
+- Disciplina: Aplicações de Redes de Computadores
+- Carga-Horária: 60h (80h/a) 
+- Pré-Requisito(s): Redes de Computadores
+- Número de créditos: 4
 
 ## EMENTA
 
