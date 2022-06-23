@@ -1,0 +1,23 @@
+digraph TCP {
+    // node [shape=rectangle]
+    closed[label="CLOSED"]
+    listen[label="LISTEN"]
+    syn_sent[label="SYN-SENT"]
+    syn_received[label="SYN-RECEIVED"]
+    established[label="ESTABLISHED"]
+    close_wait[label="CLOSE-WAIT"]
+    last_ack[label="LAST-ACK"]
+    fin_wait_1[label="FIN-WAIT-1"]
+    fin_wait_2[label="FIN-WAIT-2"]
+    closing[label="CLOSING"]
+    time_wait[label="TIME-WAIT"]
+
+    closed -> listen -> syn_received 
+    closed -> syn_sent
+    syn_sent -> syn_received
+    {syn_sent, syn_received} -> established
+    established -> {fin_wait_1, close_wait}
+    fin_wait_1 -> {fin_wait_2, closing} -> time_wait
+    close_wait -> last_ack
+    {time_wait, last_ack} -> closed
+}
